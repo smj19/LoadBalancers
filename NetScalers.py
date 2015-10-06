@@ -17,7 +17,7 @@ def api_lbinfo(lb_ipaddress):
 def raw_server_list(lb_ipaddress,grp_name):
 
   api_url = 'http://' + lb_ipaddress + '/nitro/v1/stat/lbvserver/' + grp_name + '/'
-  response = requests.get(api_url, auth=('bdover', '7p6DcT<D+X'))
+  response = requests.get(api_url, auth=('username', 'password'))
   server_list = json.loads(response.text)
   return server_list
 
